@@ -1,0 +1,56 @@
+<html>
+    <head>
+      <title>Resume Builder</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+
+    <div class="container" style=" margin-left: 3%;" >
+            <h1 align='center'>Resumes</h1>
+            <br>
+            <a href="/insert" class="btn btn-dark btn-sm">INSERT</a>
+            <a href="/home" class="btn btn-dark btn-sm">Back To Home</a>
+            <br><br>
+        <table border="1px" class="table table-hover">
+            <thead class="thead-dark">
+                <th>Personal Details</th>
+                <th>HSC</th>
+                <th>SSC</th>
+                <th>UG</th>
+                <th>PG</th>
+                <th>Skills</th>
+                <th>Languages</th>
+                <th>Certificates</th>
+                <th>Projects</th>
+                <th>Experience</th>
+                <th colspan="2">Actions</th>
+            </thead>
+    
+    
+            {%  for i in resume_list %}
+            <tr>
+                <td>{{i.Name}}<br>
+                    {{i.Address}}<br>
+                    {{i.Phone_No}}<br>
+                    {{i.Emailid}}
+                </td>
+              
+                <th>{{i.SSC}}</th>
+                <th>{{i.HSC}}</th>
+                <th>{{i.UG}}</th>
+                <th>{{i.PG}}</th>
+                <td>{{i.Skills}}</td>
+                <td>{{i.Languages}}</td>
+                <td>{{i.Certificates}}</td>
+                <td>{{i.Projects}}</td>
+                <td>{{i.Experience}}</td>
+                <td><a href="/update/{{i.id}}" class="btn btn-dark btn-sm">UPDATE</a><br><br>
+                  <a href="/display/{{i.id}}" class="btn btn-dark btn-sm">VIEW</a>
+            </tr>
+            {% endfor %}
+        </table><br>
+        </div>
+    </div>
+
+
+
+</html>

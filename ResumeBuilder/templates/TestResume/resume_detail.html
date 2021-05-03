@@ -1,0 +1,188 @@
+{% load static %}
+
+
+<html>
+    <head>
+        <title> Resume Builder</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{% static "style.css" %}">
+    </head>
+
+
+<body class="resume">
+<div class="container " style="color: black;">
+
+    <div class="jumbotron">
+        <h1 align="center">Resume</h1><br>
+        <hr class="my-2">
+        <br>
+        <div class='table'></div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h5>Personal Information:</h5>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-2">
+                   <h6>Name:</h6>
+                </div>
+                <div class="col-sm-8">
+                    <h6>{{object.Name}}</h6>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-2">
+                  <h6>Adddress:</h6>
+                </div>
+                <div class="col-sm-8">
+                    <h6>{{object.Address}}</h6>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-2">
+                  <h6>Phone No.:</h6>
+                </div>
+                <div class="col-sm-8">
+                    <h6>{{object.Phone_No}}</h6>
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-2">
+                  <h6>Mail Id.:</h6>
+                </div>
+                <div class="col-sm-8">
+                    <h6>{{object.Emailid}}</h6>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h5>Education Details:</h5>
+                    
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-2">
+                   <h6>SSC:</h6>
+                </div>
+                <div class="col-sm-8">
+                    <h6>{{object.SSC}}</h6>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-2">
+                  <h6>HSC:</h6>
+                </div>
+                <div class="col-sm-8">
+                    <h6>{{object.HSC}}</h6>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-2">
+                  <h6>UG:</h6>
+                </div>
+                <div class="col-sm-8">
+                    <h6>{{object.UG}}</h6>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-2">
+                  <h6>PG:</h6>
+                </div>
+                <div class="col-sm-8">
+                    <h6>{{object.PG}}</h6>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h5>Skills:</h5>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10">
+                    <h6>{{object.Skills}}</h6>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h5>Languages:</h5>
+                </div>
+            </div>
+        
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10">
+                    <h6>{{object.Languages}}</h6>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h5>Certificates:</h5>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10">
+                    <h6>{{object.Certificates}}</h6>
+                </div>
+            </div>
+            <br>
+           
+            <div class="row">
+                <div class="col-sm-12">
+                    <h5>Experience:</h5>
+                </div>
+            </div>
+          
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10">
+                    <h6>{{object.Experience}}</h6>
+                </div>
+            </div>
+            <br>
+            <hr class="my-2">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h5>Summary:</h5>
+                </div>
+            </div>
+           
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10">
+                    <h6>{{object.Summary}}</h6>
+                </div>
+            </div>
+            <br>
+        </table>
+        <br><br>
+        <p class="lead">
+            <button onclick="window.print()" class="btn btn-dark btn-sm">Print Resume</button>
+            <a class="btn btn-dark btn-sm" href="/insert" role="button">Try Another One.....</a>
+        </p>
+    </div>
+</div>
+</body>
+</html>

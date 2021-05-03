@@ -1,0 +1,55 @@
+a{% load static %}
+
+<html>
+<head>
+    <title> Resume Builder</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static "style.css" %}">
+</head>
+<body >
+<div class="container-fluid" >
+    <h2><center>Build Your Resume</center></h2><br><br>
+    <div class="row">
+        <div class="col-sm-6">
+            <h6><u>*FILL ALL THE DETAILS:</u></h6><BR>
+            <span>( *Enter Institute Name | Year of passing | % )</span>
+        <form action="" method="post" class="">
+            {% csrf_token %}
+            <table class="table-borderless">
+            {{form.as_table}}
+            </table>
+            <br><br>
+            <input type="Submit" name="" class="btn btn-dark btn-sm" value="Submit">
+            <a href="/list"  class="btn btn-dark btn-sm" >Back To List</a>
+        </form>
+        </div>
+        <div class="col-sm-6">
+            <ul>
+                <h6><U>Below is the list of summary examples for freshers:</U></h6><BR>
+                <li>
+                    <h6>Profile Summary for freshers: Information Technology </h6>
+                    <p>Seeking a beginner role to enhance and explore my technical knowledge gained 
+                    at Xyz University in the last three years. I hold a B.Tech degree from XYZ college and won the quiz challenge held at the campus. </p>
+                </li>
+                <li>
+                    <h6>Profile Summary for freshers: Sales</h6>
+                    <p>Seeking a challenging role in the sales department with businesses in B2B as well as B2C. Highly motivated to help the organization strengthen 
+                    its customer relationship by identifying prospects. Possess the skills to present a product or service to the clients in a professional manner.</p>
+                </li>
+                <li>
+                    <h6>Profile Summary for freshers: Online marketing/digital marketing</h6>
+                    <p>A creative and quick thinking individual with a bent towards communicating and building a relationship online. Well versed with digital
+                     marketing tools and strategies.Skilled at integrated marketing methodologies and can drive sales and increase brand awareness.</p>
+                </li>
+                <li>
+                    <h6>Profile Summary for freshers: Banking</h6>
+                    <p>Seeing for an entry-level position in a growing financial organization. Passionate about learning business concepts and possess
+                    the ability to handle work pressure and customer issues professionally. 
+                    Have exceptional advisory skills to introduce new schemes and help customers to meet their financial goals</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

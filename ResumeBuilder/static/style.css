@@ -1,0 +1,33 @@
+.body{
+    background-color:black;
+    
+}
+.resume
+{
+    margin: 5%;
+    background-color: white;
+    color: black;
+}
+body
+{
+    margin: 5%;
+    /*background-image:url("img/bg.jpg");
+    background-size: contain;
+    background-repeat: no-repeat; */
+}
+.container
+{
+    color: White;
+}
+.container .card
+{
+    background-color: black;
+}
+.container .link{
+    color: White;
+    text-decoration: none;
+}
+
+p{
+    font-size: 14px;
+}
